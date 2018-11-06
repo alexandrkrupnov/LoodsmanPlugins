@@ -70,7 +70,26 @@
     <Content Include="Utilities\LoodsmanDotNet.dll" />
     <Content Include="Utilities\PDMObjects.dll" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <COMReference Include="AgentWmiLib">
+      <Guid>{0438D53A-9A57-423C-9E54-9612C4576257}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="DataProvider">
+      <Guid>{76AA08AD-DEDA-40CB-962B-24440A3E96AD}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>if "$(OutDir)"=="bin\Debug\" (set EXPORTARGS=/debug /name32:" x86" /name64:" x64") ELSE (set EXPORTARGS=/name32:" x86" /name64:" x64")
