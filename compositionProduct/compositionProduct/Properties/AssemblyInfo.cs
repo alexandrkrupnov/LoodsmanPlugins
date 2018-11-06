@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 // Общие сведения об этой сборке предоставляются следующим набором 
 // атрибутов. Отредактируйте значения этих атрибутов, чтобы изменить
 // общие сведения об этой сборке.
-[assembly: AssemblyTitle("LoodsmanPlugin_3._51")]
+[assembly: AssemblyTitle("compositionProduct")]
 [assembly: AssemblyDescription("Модуль для ЛОЦМАН:PLM на .NET 3.5")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("ООО Комплексные решения")]

@@ -112,7 +112,7 @@ namespace ASCON.Loodsman.compositionProduct
         {
             if (value != IntPtr.Zero)
             {
-                byte[] menu = Encoding.GetEncoding(1251).GetBytes("Формирование отчета\u0000");
+                byte[] menu = Encoding.GetEncoding(1251).GetBytes("Плагины#Формирование отчета\u0000");
                 byte[] function = Encoding.GetEncoding(1251).GetBytes("RunModule\u0000");
 
                 Marshal.Copy(menu, 0, value, menu.Length);

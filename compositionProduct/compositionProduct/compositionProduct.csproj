@@ -9,7 +9,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>compositionProduct</RootNamespace>
-    <AssemblyName>LoodsmanPluginV2 3.52</AssemblyName>
+    <AssemblyName>compositionProduct</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -94,10 +94,13 @@
   <PropertyGroup>
     <PostBuildEvent>if "$(OutDir)"=="bin\Debug\" (set EXPORTARGS=/debug /name32:" x86" /name64:" x64") ELSE (set EXPORTARGS=/name32:" x86" /name64:" x64")
 "$(ProjectDir)Utilities\DllExport.exe" %25EXPORTARGS%25 /input:"$(TargetPath)"
-copy "$(TargetDir)\LoodsmanPluginV2 3.52 x86.dll" "D:\projects\myPluginsLoodsman\LoodsmanPluginV2 3.52.dll"
-copy "$(TargetDir)\Ask.dll" "D:\projects\myPluginsLoodsman\Ask.dll"
-copy "$(TargetDir)\BOSimple.dll" "D:\projects\myPluginsLoodsman\BOSimple.dll"
-copy "$(TargetDir)\LoodsmanDotNet.dll" "D:\projects\myPluginsLoodsman\LoodsmanDotNet.dll"</PostBuildEvent>
+copy "$(TargetDir)\compositionProduct x86.dll" "C:\Program Files (x86)\ASCON\Loodsman\Client\compositionProduct\compositionProduct.dll"
+copy "$(TargetDir)\Ask.dll" "C:\Program Files (x86)\ASCON\Loodsman\Client\compositionProduct\Ask.dll"
+copy "$(TargetDir)\BOSimple.dll" "C:\Program Files (x86)\ASCON\Loodsman\Client\compositionProduct\BOSimple.dll"
+copy "$(TargetDir)\PDMObjects.dll" "C:\Program Files (x86)\ASCON\Loodsman\Client\compositionProduct\PDMObjects.dll"
+copy "$(TargetDir)\LoodsmanDotNet.dll" "C:\Program Files (x86)\ASCON\Loodsman\Client\compositionProduct\LoodsmanDotNet.dll"
+copy "$(TargetDir)\Interop.DataProvider.dll" "C:\Program Files (x86)\ASCON\Loodsman\Client\compositionProduct\Interop.DataProvider.dll
+copy "$(TargetDir)\Interop.AgentWmiLib.dll" "C:\Program Files (x86)\ASCON\Loodsman\Client\compositionProduct\Interop.AgentWmiLib.dll</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
