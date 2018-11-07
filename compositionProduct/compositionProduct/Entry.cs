@@ -13,6 +13,9 @@ using System.IO;
 using DllExport;
 using LoodsmanDotNet;
 using System.Security.Permissions;
+using System.Security;
+using compositionProduct;
+using DataProvider;
 
 namespace ASCON.Loodsman.compositionProduct
 {
@@ -41,10 +44,14 @@ namespace ASCON.Loodsman.compositionProduct
                 try
                 {
                     IPluginCall pc = (IPluginCall)Marshal.GetTypedObjectForIUnknown(IPC, typeof(IPluginCall));
-
+                   
                     // Работа модуля
                     // ...
                     MessageBox.Show("Hello, Loodsman!");
+
+                    Form1 f = new Form1(pc);
+                    Application.Run(f);
+
                 }
                 catch (Exception ex)
                 {
