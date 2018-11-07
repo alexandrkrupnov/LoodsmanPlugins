@@ -44,8 +44,51 @@ namespace compositionProduct
             arrProd.AddToArrProduct(newObj);
         }
 
+        private void getLinkedObjects2()
+        {
+            //int id = arrProd.GetArr[0].IdVersion;
+            var tree = iPluginCall.GetDataSet("GetLinkedObjects2", new object[] { arrProd.GetArr[0].IdVersion, "Состоит из ...",false,true,true}) as IDataSet;
+            int id;
+            string type;
+            string product;
+            while (tree.Eof == false)
+            {
+                switch (Convert.ToInt32(tree.FieldValue["_ID_TYPE"]))
+                {
+                    case 38:
+                        type = "Материал по КД";
+                        break;
+                    case 64:
+                        type = "Комплекс";
+                        break;
+                    case 65:
+                        type = "Сборочная единица";
+                        break;                        
+                    case 66:
+                        type = "Деталь";
+                        break;
+                    case 67:
+                        type = "Комплект";
+                        break;
+                    case 68:
+                        type = "Стандартное изделие";
+                        break;
+                    case 70:
+                        type = "Прочее изделие";
+                        break;
+
+                }
+                richTextBox1.AppendText(Convert.ToString(tree.FieldValue["_PRODUCT"]));
+                richTextBox1.AppendText(Convert.ToString(tree.FieldValue["_PRODUCT"]));
+                richTextBox1.AppendText(Convert.ToString(tree.FieldValue["_PRODUCT"]));
+                richTextBox1.AppendText(Convert.ToString(tree.FieldValue["_PRODUCT"]));
+                tree.Next();
+            }
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
+            getLinkedObjects2();
             repotToRtb();
         }
 
